@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.http.*;
+import org.springframework.beans.factory.annotation.Value;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -22,7 +23,8 @@ public class DocumentService {
     private DocumentRepository documentRepository;
     
     private final String uploadDir = "/tmp/uploads/";
-    private final String ocrServiceUrl = "http://ia-service:8001/ocr";
+    @Value("${ocr.service.url:http://ia-service:8001/ocr}")
+    private String ocrServiceUrl;
     
     public Document uploadDocument(MultipartFile file) throws IOException {
         // 1. Créer le dossier si n'existe pas
