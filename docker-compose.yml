@@ -69,6 +69,21 @@ services:
     networks:
       - ocr-network
 
+ # ═══════════════════════════════════════════════════════
+  # SERVICE 5 : pgAdmin (Interface PostgreSQL)
+  # ═══════════════════════════════════════════════════════
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "8081:80"
+    networks:
+      - ocr-network
+    depends_on:
+      - db
 # ═══════════════════════════════════════════════════════
 # VOLUMES : Stockage permanent
 # ═══════════════════════════════════════════════════════
