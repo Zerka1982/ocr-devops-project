@@ -46,8 +46,8 @@ docker-compose up -d
 ## 👥 Équipe
 
 - Backend : @HM-Hadil
-- Frontend : (à définir)
-- OCR Service : (à définir)
+- Frontend : [Khouloud GHABI](https://github.com/Khouloud-ghabi)
+- OCR Service : [Melek HADDAR ](https://github.com/HaddarMelek)
 
 ## 📄 Licence
 
