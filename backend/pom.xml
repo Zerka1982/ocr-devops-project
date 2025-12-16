@@ -49,9 +49,10 @@
         
         <!-- Lombok (pour @Data, @NoArgsConstructor, etc.) -->
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
+             <groupId>org.projectlombok</groupId>
+             <artifactId>lombok</artifactId>
+             <version>1.18.32</version>
+             <scope>provided</scope>
         </dependency>
         
         <!-- Validation -->
